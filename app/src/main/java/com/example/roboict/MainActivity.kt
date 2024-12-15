@@ -27,13 +27,14 @@ class MainActivity : AppCompatActivity() {
         //loading the website
         wb.loadUrl("https://robo-ict.vercel.app/")
 
-        //enableing the java-script of the url
+        //enabling the java-script of the url
         wb.settings.javaScriptEnabled = true
 
         //enableing web client
         wb.webViewClient = WebViewClient()
     }
 
+    //enabling back pressing
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         // Check whether the key event is the Back button and if there's history.
         if (keyCode == KeyEvent.KEYCODE_BACK && wb.canGoBack()) {
